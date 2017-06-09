@@ -6,9 +6,9 @@ OAuth Server API
 Register an account
 *******************
 
-POST http://localhost/oauth/register/create  
-Header Content-Type: application/json  
-Body {"username": 18811066874, "password": 1234} 
+|POST http://localhost/oauth/register/create  
+|Header Content-Type: application/json  
+|Body {"username": 18811066874, "password": 1234} 
 
 **************************
 Generate a Bearer token
