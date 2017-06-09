@@ -6,8 +6,10 @@ OAuth Server API
 Register an account
 *******************
 
-**POST** http://localhost/oauth/register/create == 
-**Header** Content-Type: application/json  ==
+**POST** http://localhost/oauth/register/create 
+
+**Header** Content-Type: application/json
+
 **Body** {"username": 18811066874, "password": 1234} 
 
 **************************
@@ -15,13 +17,18 @@ Generate a Bearer token
 **************************
 
 **POST** http://localhost/oauth/token/generate
+
 **Header** Content-Type: application/json
-**Body** {"username": 18811066874, "password": 1234}
-**Response**
+
+**Body** {"username": 18811066874, "password": 1234}  
+
+**Response**   
+```
 {
 "username": 18811066874,
 "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6MTg4MTEwNjY4NzQsImlhdCI6MTQ5NzAyMjI3MywiZXhwIjoxNDk3MTA4NjczfQ.L4u_hrS59OcOpSLyp_v_ag5-yA_p-LT16yRwIoa46sY"
-} 
+}
+``` 
 
 *******************
 Upload an mp3 file to server
