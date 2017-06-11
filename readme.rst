@@ -10,6 +10,8 @@ Deploy/Develop Requirements
 * MySQL 5.5/5.6
 * Apache 2
 
+`Test Server <http://52.55.178.57/oauth/>`
+
 *******************
 Register an account
 *******************
@@ -49,9 +51,8 @@ Upload an mp3 file to server
 ::
 
 	Authorization:Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6MTg4MTEwNjY4NzQsImlhdCI6MTQ5NzAyMjI3MywiZXhwIjoxNDk3MTA4NjczfQ.L4u_hrS59OcOpSLyp_v_ag5-yA_p-LT16yRwIoa46sY
-	Content-Type:application/json
 
-**Body** ``{"username": 18811066874, "password": 1234}``
+**Body** form-data ``key/value: file test_record.mp3``
 
 **Response**
 ::
@@ -63,7 +64,7 @@ Upload an mp3 file to server
 
 
 ************
-Get the mp3 file via token
+Get the mp3 file with the token
 ************
 
 **GET** http://localhost/oauth/mp3/uploaded?file_name=test_record.mp3
@@ -71,8 +72,7 @@ Get the mp3 file via token
 **Header**
 ::
 
-	Authorization:Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6MTg4MTEwNjY4NzQsImlhdCI6MTQ5NzAyMjI3MywiZXhwIjoxNDk3MTA4NjczfQ.L4u_hrS59OcOpSLyp_v_ag5-yA_p-LT16yRwIoa46sY
-	Content-Type:application/json 
+	Authorization:Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6MTg4MTEwNjY4NzQsImlhdCI6MTQ5NzAyMjI3MywiZXhwIjoxNDk3MTA4NjczfQ.L4u_hrS59OcOpSLyp_v_ag5-yA_p-LT16yRwIoa46sY 
 
 
 *********
