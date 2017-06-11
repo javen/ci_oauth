@@ -68,7 +68,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1>QA OAuth Server API</h1>
+	<h1>Tropo Test OAuth Server API</h1>
 
 	<div id="body">
 
@@ -97,9 +97,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<strong>Header</strong> <br>
 			Authorization:Bearer 
 			eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6MTg4MTEwNjY4NzQsImlhdCI6MTQ5NzAyMjI3MywiZXhwIjoxNDk3MTA4NjczfQ.L4u_hrS59OcOpSLyp_v_ag5-yA_p-LT16yRwIoa46sY <br>
-			Content-Type:application/json        <br>
 
-			<strong>Body</strong> {"username": 18811066874, "password": 1234} <br>
+			<strong>Body</strong> form-data key/value: <strong>file/test_record.mp3</strong> <br>
 
 			<strong>Response</strong>                                    <br>
 			{											<br>
@@ -108,13 +107,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			}
 		</code>
 
-		<h3>Get the mp3 file via token:</h3>          
+		<h3>Get the mp3 file with the token:</h3>          
 		<code>
 			<strong>GET</strong> http://localhost/oauth/mp3/uploaded?file_name=test_record.mp3 <br>
 			<strong>Header</strong> <br>Authorization:Bearer                 
 				   eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6MTg4MTEwNjY4NzQsImlhdCI6MTQ5NzAyMjI3MywiZXhwIjoxNDk3MTA4NjczfQ.L4u_hrS59OcOpSLyp_v_ag5-yA_p-LT16yRwIoa46sY <br>
-				   Content-Type:application/json          
 		</code>
+
+		<p>Contribute to the project on <a href='https://github.com/javen/ci_oauth'>github</a>.</p>
 	</div>
 
 	<p class="footer">This page is using MySQL5.6, PHP5.6, Apache2.4, CodeIgniter 3.1.2.</p>
