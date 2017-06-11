@@ -2,6 +2,14 @@
 OAuth Server API
 ###################
 
+***************************
+Deploy/Develop Requirements
+***************************
+* PHP 5.4 or greater
+* CodeIgniter 3.0+
+* MySQL 5.5/5.6
+* Apache 2
+
 *******************
 Register an account
 *******************
