@@ -2003,11 +2003,11 @@ abstract class REST_Controller extends CI_Controller {
 
                     if ($decoded_array['exp'] - $now->getTimestamp() >= 0)
                     {
-                        log_message('debug', 'Token的剩余时间：'.($decoded_array['exp'] - $now->getTimestamp()).'s');
+                        log_message('debug', 'Token valid time left: '.($decoded_array['exp'] - $now->getTimestamp()).'s');
                     }
                     else
                     {
-                        log_message('debug', 'Token已过期时间：'.($now->getTimestamp() - $decoded_array['exp']).'s');
+                        log_message('debug', 'Token has expired: '.($now->getTimestamp() - $decoded_array['exp']).'s');
 
                         $this->response([    
                             $this->config->item('rest_status_field_name') => 'expired_token',
