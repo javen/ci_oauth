@@ -1,4 +1,9 @@
 <?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+require APPPATH . '/libraries/SignatureInvalidException.php';
+require APPPATH . '/libraries/BeforeValidException.php';
+require APPPATH . '/libraries/ExpiredException.php';
 
 /**
  * JSON Web Token implementation, based on this spec:
