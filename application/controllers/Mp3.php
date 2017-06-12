@@ -11,15 +11,17 @@ class Mp3 extends REST_Controller
 	{
 		parent::__construct();
 		$this->load->helper('url');
+		$this->load->library('session');
 	}
 
 	function upload_post()
 	{
 		$username = $this->session->username;
+		log_message('debug', 'Username stored in session is: ' . $username);
 		
 		if( ! isset($_FILES['file']['tmp_name'])) 
 		{
-        	$this->response(['status' => 'error', 'message' => '没有要上传的文件！'], 400);
+        	$this->response(['status' => 'error', 'message' => 'No file is choosen.'], 400);
     	}
 
     	$config['upload_path'] = APPPATH.'../upload/'.$username;
