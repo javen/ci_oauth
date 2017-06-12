@@ -147,7 +147,7 @@ $config['auth_source'] = '';
 | requests etc), set to TRUE;
 |
 */
-$config['allow_auth_and_keys'] = TRUE;
+$config['allow_auth_and_keys'] = FALSE;
 
 /*
 |--------------------------------------------------------------------------
@@ -197,9 +197,6 @@ $config['auth_library_function'] = '';
 // ---Uncomment list line for the wildard unit test
 // $config['auth_override_class_method']['wildcard_test_cases']['*'] = 'basic';
 
-// JWT Example
-$config['auth_override_class_method_http']['token']['generate']['post'] = 'none';
-
 /*
 |--------------------------------------------------------------------------
 | Override auth types for specific 'class/method/HTTP method'
@@ -214,6 +211,9 @@ $config['auth_override_class_method_http']['token']['generate']['post'] = 'none'
 
 // ---Uncomment list line for the wildard unit test
 // $config['auth_override_class_method_http']['wildcard_test_cases']['*']['options'] = 'basic';
+
+// JWT Example
+$config['auth_override_class_method_http']['token']['generate']['post'] = 'none';
 
 /*
 |--------------------------------------------------------------------------
