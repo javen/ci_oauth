@@ -2,9 +2,9 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 require APPPATH . '/libraries/REST_Controller.php';
 /**
- * Upload photo/images
+ * Upload audio files
  */
-class Mp3 extends REST_Controller
+class Recordings extends REST_Controller
 {
 	
 	function __construct()
@@ -19,13 +19,13 @@ class Mp3 extends REST_Controller
 		$username = $this->session->username;
 		log_message('debug', 'Username stored in session is: ' . $username);
 		
-		if( ! isset($_FILES['file']['tmp_name'])) 
+		if( ! isset($_FILES['filename']['tmp_name'])) 
 		{
         	$this->response(['status' => 'error', 'message' => 'No file is choosen.'], 400);
     	}
 
     	$config['upload_path'] = APPPATH.'../upload/'.$username;
-		$config['allowed_types'] = 'mp3';
+		$config['allowed_types'] = '*';
 		$config['overwrite'] = TRUE;
 
 		$this->load->library('upload', $config);
@@ -35,7 +35,7 @@ class Mp3 extends REST_Controller
 			mkdir($config['upload_path'], 0777, TRUE);
 		}
 
-		if ( ! $this->upload->do_upload('file')) 
+		if ( ! $this->upload->do_upload('filename')) 
 		{
         	$this->response(array('error' => strip_tags($this->upload->display_errors())), 404);
     	} 

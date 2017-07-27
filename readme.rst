@@ -45,20 +45,20 @@ Generate a Bearer token
 Upload an mp3 file to server
 *******************
 
-**POST** http://localhost/oauth/mp3/upload
+**POST** http://localhost/oauth/recordings/upload
 
 **Header**
 ::
 
 	Authorization:Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6MTg4MTEwNjY4NzQsImlhdCI6MTQ5NzAyMjI3MywiZXhwIjoxNDk3MTA4NjczfQ.L4u_hrS59OcOpSLyp_v_ag5-yA_p-LT16yRwIoa46sY
 
-**Body** form-data ``key/value: file test_record.mp3``
+**Body** form-data ``key/value: filename test_record.mp3``
 
 **Response**
 ::
 
 	{
-		"url": "http://localhost/oauth/mp3/uploaded?file_name=test_record.mp3",
+		"url": "http://localhost/oauth/recordings/uploaded?file_name=test_record.mp3",
 		"status": "success"
 	} 
 
@@ -67,7 +67,7 @@ Upload an mp3 file to server
 Get the mp3 file with the token
 ************
 
-**GET** http://localhost/oauth/mp3/uploaded?file_name=test_record.mp3
+**GET** http://localhost/oauth/recordings/uploaded?file_name=test_record.mp3
 
 **Header**
 ::
